@@ -1,6 +1,6 @@
 {
   "name": "auto-form",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "scan web pages and generate form structure",
   "author": "He Li <jet.in.brain@gmail.com>",
   "main": "index.js",
@@ -13,7 +13,7 @@
   ],
   "license": "MIT",
   "bin": {
-    "beanworker": "./bin/auto-form"
+    "auto-form": "./bin/auto-form"
   },
   "config": {
     "blanket": {
