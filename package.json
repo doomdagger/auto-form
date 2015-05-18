@@ -1,6 +1,6 @@
 {
   "name": "auto-form",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "scan web pages and generate form structure",
   "author": "He Li <jet.in.brain@gmail.com>",
   "main": "index.js",

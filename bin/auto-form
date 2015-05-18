@@ -4,5 +4,5 @@ var autoform = require('auto-form'),
     fs       = require('fs');
 
 process.argv.slice(2).forEach(function (file) {
-    fs.writeFileSync(file + '-out.csv', autoform.analyse(fs.readFileSync(file)).join('\n'));
+    fs.writeFileSync(file + '-out.csv', autoform.analyse(fs.readFileSync(file).toString()).join('\n'));
 });
