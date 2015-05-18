@@ -1,0 +1,11 @@
+1,basic.borrowInfoForm.yrd_token,
+2,basic.borrowInfoForm.borrowPurpose,借款用途：
+3,basic.borrowInfoForm.borrowAmt,申请金额：
+4,basic.borrowInfoForm.borrowPeriod,借款期限：
+5,basic.borrowInfoForm.borrowDesc,借款描述：
+6,basic.borrowInfoForm.borrowMax,可接受月最高还款额：
+7,basic.borrowInfoForm.borrowerQQ,QQ号码：
+8,basic.borrowInfoForm.borrowerMobile,手机号码：
+9,basic.borrowInfoForm.discountCode,优惠码(选填)：
+10,basic.borrowInfoForm.maxLoanAmt,
+11,basic.borrowInfoForm.minLoanAmt,
