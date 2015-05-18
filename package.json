@@ -1,0 +1,59 @@
+{
+  "name": "auto-form",
+  "version": "1.0.0",
+  "description": "scan web pages and generate form structure",
+  "author": "He Li <jet.in.brain@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "form",
+    "dom"
+  ],
+  "license": "MIT",
+  "bin": {
+    "beanworker": "./bin/auto-form"
+  },
+  "config": {
+    "blanket": {
+      "pattern": [
+        "lib",
+        "index.js"
+      ],
+      "data-cover-never": [
+        "node_modules",
+        "test",
+        "examples"
+      ],
+      "output-reporter": "spec",
+      "travis-cov": {
+        "threshold": 90
+      }
+    }
+  },
+  "bugs": "https://github.com/doomdagger/auto-form/issues",
+  "contributors": [
+    "He Li <jet.in.brain@gmail.com>"
+  ],
+  "dependencies": {
+    "jquery": "2.1.4"
+  },
+  "devDependencies": {
+    "blanket": "~1.1.6",
+    "mocha": "~2.2.1",
+    "mocoverage": "~1.0.0",
+    "must": "~0.12.0",
+    "patched-blanket": "~1.0.1",
+    "travis-cov": "~0.2.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doomdagger/auto-form.git"
+  },
+  "scripts": {
+    "test": "mocha -t 8000 --check-leaks --ui exports --require patched-blanket -R mocoverage test/test-*.js",
+    "test-cov": "mocha -t 20000 --require patched-blanket -R travis-cov test/test-*.js",
+    "test-travis": "mocha -R spec -t 20000 test/test-*.js && npm run test-cov"
+  }
+}
