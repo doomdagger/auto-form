@@ -1,8 +1,16 @@
 #!/usr/bin/env node
 
-var autoform = require('auto-form'),
+var autoform = require('../index'),
+
     fs       = require('fs');
 
 process.argv.slice(2).forEach(function (file) {
-    fs.writeFileSync(file + '-out.csv', autoform.analyse(fs.readFileSync(file).toString()).join('\n'));
+    var input = fs.readFileSync(file).toString();
+
+    autoform.analyse(input).then(function (ret) {
+        fs.writeFileSync(file + '-out.csv', ret.join('\n'));
+    }).catch(function (err) {
+        console.log(err);
+    });
+
 });
